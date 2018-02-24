@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/refresh"
+        android:title="@string/operate_refresh"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/close_current"
+        android:title="@string/operate_close_current"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/close_other"
+        android:title="@string/operate_close_other"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/close_all"
+        android:title="@string/operate_close_all"
+        app:showAsAction="never"/>
+
+</menu>

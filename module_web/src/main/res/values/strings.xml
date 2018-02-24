@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">module_web</string>
+    <string name="operate_refresh">刷新当前选项卡</string>
+    <string name="operate_close_current">关闭当前选项卡</string>
+    <string name="operate_close_other">关闭其他选项卡</string>
+    <string name="operate_close_all">关闭所有选项卡</string>
+    <string name="main_operation">操作</string>
+    <string name="web_frag00_btn_addorder">添加订单</string>
+    <string name="web_frag00_btn_screenorder">筛选订单</string>
+</resources>
