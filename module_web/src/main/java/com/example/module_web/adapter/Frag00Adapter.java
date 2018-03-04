@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.module_web.R;
+import com.example.module_web.beans.Order;
+
+import java.util.List;
 
 /**
  * Created by Administrator on 2018/2/21.
@@ -15,6 +18,10 @@ import com.example.module_web.R;
 
 public class Frag00Adapter extends RecyclerView.Adapter<Frag00Adapter.ViewHolder>{
     private Context mContext;
+    private List<? extends Order> orders;
+    public Frag00Adapter(Context context, List<? extends Order> orders){
+        
+    }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if(mContext==null){
@@ -26,7 +33,7 @@ public class Frag00Adapter extends RecyclerView.Adapter<Frag00Adapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        
+
     }
 
     @Override
@@ -42,7 +49,7 @@ public class Frag00Adapter extends RecyclerView.Adapter<Frag00Adapter.ViewHolder
         TextView mTvWasMoney;
         TextView mTvIsMoney;
         TextView mTvAddrs;
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             this.itemView = itemView;
             mTvNum = itemView.findViewById(R.id.item_frag00_num);

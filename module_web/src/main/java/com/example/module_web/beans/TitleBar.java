@@ -10,9 +10,11 @@ public class TitleBar {
     private int mImgIcon;
     private String mTvTitle;
     private ImageButton mImgBtn;
+
     public TitleBar(String tvTitle){
         this.mTvTitle = tvTitle;
     }
+    
     public TitleBar(String tvTitle,ImageButton imgBtn){
         this.mTvTitle = tvTitle;
         this.mImgBtn = imgBtn;

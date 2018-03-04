@@ -55,7 +55,7 @@
                     android:id="@+id/web_recycler_main_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    app:layout_scrollFlags="scroll|enterAlways">
                 </android.support.v7.widget.RecyclerView>
                 <View
                     android:layout_width="match_parent"

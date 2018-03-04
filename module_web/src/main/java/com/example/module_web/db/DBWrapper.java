@@ -23,6 +23,11 @@ public class DBWrapper {
         //创建数据库
         mOpenHelper = new DBOpenHelper(context);
     }
+
+    public void dropTable(String tableName){
+        ((DBOpenHelper)mOpenHelper).onDrop(getReader(),tableName);
+    }
+
     public SQLiteDatabase getWriter(){
         return mOpenHelper.getWritableDatabase();
     }
