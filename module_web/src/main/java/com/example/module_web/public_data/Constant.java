@@ -15,12 +15,12 @@ public class Constant {
     };
     public static final String DB_NAME = "left_menu.db";
     public static final int DB_VERSION = 1;
-    public static final String TABLE_NAME_GROUP = "groupp";
+    public static final String TABLE_NAME_GROUP = "group_data";
     public static final String COLUMN_GROUP_NAME_ID = "_id";
     public static final String COLUMN_GROUP_NAME_KIND = "kind";
     public static final String COLUMN_GROUP_NAME_TYPE = "type";
 
-    public static final String TABLE_NAME_CHILD = "child";
+    public static final String TABLE_NAME_CHILD = "child_data";
     public static final String COLUMN_CHILD_NAME_ID = "_id";
     public static final String COLUMN_CHILD_NAME_MODULE = "module";
     public static final String COLUMN_CHILD_NAME_TYPE = "type";

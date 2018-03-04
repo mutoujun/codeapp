@@ -11,6 +11,7 @@ import com.example.module_web.public_data.Constant;
  */
 
 public class DBOpenHelper extends SQLiteOpenHelper {
+
     public DBOpenHelper(Context context) {
         super(context, Constant.DB_NAME, null, Constant.DB_VERSION);
     }
@@ -30,5 +31,9 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+
+    void onDrop(SQLiteDatabase db,String tableName){
+        db.execSQL("drop table "+tableName);
     }
 }

@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.module_web.R;
 import com.example.module_web.adapter.DBAdapter;
+import com.example.module_web.db.DBOpenHelper;
 import com.example.module_web.db.DBWrapper;
 import com.example.module_web.public_data.Constant;
 import com.example.module_web.utils.ChildViewHolder;
@@ -58,15 +59,37 @@ public class WebLeftMenu extends LinearLayout {
 
     private void initView() {
         mExpandList = mView.findViewById(R.id.expand_list);
-    }
+}
 
     private void init() {
-        loadDB();
-//        setupExpandableListView();
+        setupExpandableListView();
     }
 
+
+
+    private void setupExpandableListView() {
+//        loadDB();
+        loadLocal();
+//        loadNet();
+    }
+    /**
+     * 加载网络数据
+     */
+    private void loadNet() {
+
+    }
+
+    /**
+     * 加载数据库数据
+     */
     private void loadDB() {
+
         DBWrapper dbWrapper = new DBWrapper(mContext);
+//        dbWrapper.dropTable("group");
+//        dbWrapper.dropTable("child");
+        dbWrapper.dropTable("group_data");
+        dbWrapper.dropTable("child_data");
+
         /**
          * 添加数据
          */
@@ -90,9 +113,11 @@ public class WebLeftMenu extends LinearLayout {
         DBAdapter dbAdapter = new DBAdapter(groupCursor,mContext,dbWrapper);
         mExpandList.setAdapter(dbAdapter);
     }
-
-    private void setupExpandableListView() {
-//        mBinding.expandList.setGroupIndicator(null);
+    /**
+     * 加载本地数据
+     */
+    private void loadLocal() {
+        //        mBinding.expandList.setGroupIndicator(null);
         final ExpandAdapter expandAdapter = new ExpandAdapter(mContext, Constant.GROUPS,Constant.CHILDREN);
         mExpandList.setAdapter(expandAdapter);
     }
